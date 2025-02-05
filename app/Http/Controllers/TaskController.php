@@ -15,6 +15,7 @@ class TaskController extends Controller
   public function createTask(Request $req) {
       $req->validate([
         "title"=>"Required",
+       "description"=>"Required",
         "date"=>"Required|date|after:today",
       ]);
 
